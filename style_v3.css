@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Avara-Bold";
+    src: url("fonts/Avara-Bold.woff2") format("woff2"); 
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto; 
+}
+
+h1 {
+    margin: 0;
+}
+
+body {background-color:darkcyan;
+    font-family: "Avara-Bold", serif; 
+}
+
+
+.grid-container {
+    display: grid;
+    padding: 15px;
+    gap: 15px; 
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;  
+    grid-template-areas:
+    "name name name name bio"
+    "image-2 image-2 image-1 image-1 text-1"
+    ". . . . text-2"
+    "image-3 image-3 . . text-3";
+}
+
+.name {
+    grid-area: name; 
+    position: sticky; 
+    top: 0; 
+    mix-blend-mode: difference; 
+}
+.name h1 {
+    text-align: center;
+    font-size: 100px;
+    margin: 20;
+    color:brown; 
+    transition: color 3s ease;  
+    /* font-family:Arial, Helvetica, sans-serif; */
+}
+
+.name h1:hover {
+    color:darkgreen; 
+}
+
+.bio {
+    grid-area: bio; 
+}
+
+.bio p {
+    opacity: 1; 
+    transition: opacity 0.5s ease;
+}
+
+.bio p:hover {
+opacity: 0.5;
+}
+
+.image-1 {
+    grid-area: image-1;
+}
+
+.image-1 img {
+    transition: transform 0.5s ease;
+}
+
+.image-1 img:hover {
+    transform: scale(1.7);
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+.image-2 img {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.5s ease; 
+}
+
+.image-2 img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+}
+
+.image-3 {
+    grid-area: image-3;
+}
+
+.image-3 img {
+    transition: transform 0.5s ease; 
+}
+
+.image-3 img:hover {
+    transform: rotate(10deg);
+}
+
+.text-1 {
+    grid-area: text-1; 
+}
+
+.text-2 {
+    grid-area: text-2; 
+}
+
+.text-3 {
+    grid-area: text-3; 
+}
