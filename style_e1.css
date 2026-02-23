@@ -1,0 +1,161 @@
+
+img {
+    max-width: 100%;
+    height: auto; 
+}
+
+h1 {
+    margin: 0;
+}
+
+.banner-titel {
+    font-family: "comba", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38pt;
+     position: fixed;
+  z-index: 10; /* Weiter vorne, überlagert .hintergrund */
+}
+
+.banner-bio {
+    font-family: Arial, Helvetica, sans-serif;
+     position: fixed;
+  z-index: 10; /* Weiter vorne, überlagert .hintergrund */
+  padding-top: 150px;
+}
+
+.banner-mail {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed; 
+    z-index: 10; 
+    padding-top: 185px; 
+}
+
+body {
+    background-color:rgb(0, 134, 139);
+}
+
+a {
+    color: inherit; 
+    text-decoration: none;
+}
+
+.banner-flaeche {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px; /* Breite der Fläche */
+    height: 1000px; /* Höhe der Fläche */
+    background-color: rgb(194, 66, 66); /* Hintergrundfarbe */
+  z-index: 1; /* Weiter hinten */
+    /* Optional: Rahmen */
+}
+
+
+
+.grid-container {
+    display: grid;
+    padding: 15px;
+    gap: 15px; 
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;  
+    grid-template-areas:
+    "banner . . . image-1"
+    "banner . . . image-2"
+    "banner . . . image-3"
+    "banner . . . image-4"
+    "banner . . . image-5"
+    "banner . . . image-6"
+    "banner . . . image-7"
+    "banner . . . image-8"
+    "banner . . . image-9"
+    "banner . . . image-10"
+    "banner . . . image-11"
+    "banner . . . image-12"
+    "banner . . . image-13"
+    "banner . . . image-14"
+    "banner . . . image-15"
+    "banner . . . image-16"
+    "banner . . . image-17"
+    "banner . . . image-18"
+    "banner . . . image-19";
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.image-1 {
+    grid-area: image-1;
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+.image-3 {
+    grid-area: image-3;
+}
+
+.image-4 {
+    grid-area: image-4; 
+}
+
+.image-5 {
+    grid-area: image-5;
+}
+
+.image-6 {
+    grid-area: image-6;
+}
+
+.image-7 {
+    grid-area: image-7;
+}
+
+.image-8 {
+    grid-area: image-8;
+}
+
+.image-9 {
+    grid-area: image-9;
+}
+
+.image-10 {
+    grid-area: image-10; 
+}
+
+.image-11 {
+    grid-area: image-11;
+}
+
+.image-12 {
+    grid-area: image-12;
+}
+
+.image-13 {
+    grid-area: image-13;
+}
+
+.image-14 {
+    grid-area: image-14;
+}
+
+.image-15 {
+    grid-area: image-15;
+}
+
+.image-16 {
+    grid-area: image-16;
+}
+
+.image-17 {
+    grid-area: image-17; 
+}
+
+.image-18 {
+    grid-area: image-18;
+}
+
+.image-19 {
+    grid-area: image-19;
+}
