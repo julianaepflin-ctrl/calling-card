@@ -1,0 +1,149 @@
+
+
+/* ------------------- Grundlegendes ------------------- */
+body {
+    background-color: rgb(0, 134, 139);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ------------------- Banner ------------------- */
+.banner-titel {
+    font-family: "comba", sans-serif;
+    font-weight: 700;
+    font-size: 43pt;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.banner-bio {
+    position: fixed;
+    top: 100px; /* Abstand unter Titel */
+    left: 20px;
+    z-index: 10;
+}
+
+.banner-mail {
+    position: fixed;
+    top: 160px; /* Abstand unter Bio */
+    left: 20px;
+    z-index: 10;
+}
+
+.bio {
+    position: fixed; /* bleibt sichtbar */
+    top: 220px; /* unter Mail */
+    left: 20px;
+    z-index: 10;
+}
+
+/* ------------------- Grid ------------------- */
+.grid-container {
+    display: grid;
+    padding: 15px;
+    gap: 15px; 
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "banner zoom zoom zoom image-1"
+        "banner zoom zoom zoom image-2"
+        "banner zoom zoom zoom image-3"
+        "banner zoom zoom zoom image-4"
+        "banner zoom zoom zoom image-5"
+        "banner zoom zoom zoom image-6"
+        "banner . . . image-7"
+        "banner . . . image-8"
+        "banner . . . image-9"
+        "banner . . . image-10"
+        "banner . . . image-11"
+        "banner . . . image-12"
+        "banner . . . image-13"
+        "banner . . . image-14"
+        "banner . . . image-15"
+        "banner . . . image-16"
+        "banner . . . image-17"
+        "banner . . . image-18"
+        "banner . . . image-19";
+}
+
+.banner-flaeche {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 383px;
+    height: 1060px;
+    background-color: rgb(194, 66, 66);
+    z-index: 1;
+}
+
+/* ------------------- Zoom ------------------- */
+.zoom {
+    grid-area: zoom;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: sticky;
+    top: 15px;
+    align-self: start;
+}
+
+.zoom-content {
+    display: none;
+}
+
+/* ------------------- Bilder & Hover ------------------- */
+.image-1 { grid-area: image-1; }
+.image-2 { grid-area: image-2; }
+.image-3 { grid-area: image-3; }
+.image-4 { grid-area: image-4; }
+.image-5 { grid-area: image-5; }
+.image-6 { grid-area: image-6; }
+.image-7 { grid-area: image-7; }
+.image-8 { grid-area: image-8; }
+.image-9 { grid-area: image-9; }
+.image-10 { grid-area: image-10; }
+.image-11 { grid-area: image-11; }
+.image-12 { grid-area: image-12; }
+.image-13 { grid-area: image-13; }
+.image-14 { grid-area: image-14; }
+.image-15 { grid-area: image-15; }
+.image-16 { grid-area: image-16; }
+.image-17 { grid-area: image-17; }
+.image-18 { grid-area: image-18; }
+.image-19 { grid-area: image-19; }
+
+/* Hover für Zoom-Bilder */
+.image-1:hover ~ .zoom .zoom-1 { display: block; opacity: 1; }
+.image-2:hover ~ .zoom .zoom-2 { display: block; opacity: 1; }
+.image-3:hover ~ .zoom .zoom-3 { display: block; opacity: 1; }
+.image-4:hover ~ .zoom .zoom-4 { display: block; opacity: 1; }
+.image-5:hover ~ .zoom .zoom-5 { display: block; opacity: 1; }
+.image-6:hover ~ .zoom .zoom-6 { display: block; opacity: 1; }
+.image-7:hover ~ .zoom .zoom-7 { display: block; opacity: 1; }
+.image-8:hover ~ .zoom .zoom-8 { display: block; opacity: 1; }
+.image-9:hover ~ .zoom .zoom-9 { display: block; opacity: 1; }
+.image-10:hover ~ .zoom .zoom-10 { display: block; opacity: 1; }
+.image-11:hover ~ .zoom .zoom-11 { display: block; opacity: 1; }
+.image-12:hover ~ .zoom .zoom-12 { display: block; opacity: 1; }
+.image-13:hover ~ .zoom .zoom-13 { display: block; opacity: 1; }
+.image-14:hover ~ .zoom .zoom-14 { display: block; opacity: 1; }
+.image-15:hover ~ .zoom .zoom-15 { display: block; opacity: 1; }
+.image-16:hover ~ .zoom .zoom-16 { display: block; opacity: 1; }
+.image-17:hover ~ .zoom .zoom-17 { display: block; opacity: 1; }
+.image-18:hover ~ .zoom .zoom-18 { display: block; opacity: 1; }
+.image-19:hover ~ .zoom .zoom-19 { display: block; opacity: 1; }
+
+/* ------------------- Anker-Scroll ------------------- */
+#projekt1, #projekt2, #projekt3 {
+    scroll-margin-top: 220px; /* Höhe Banner + Bio + Mail */
+}

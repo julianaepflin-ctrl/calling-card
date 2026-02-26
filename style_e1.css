@@ -21,15 +21,16 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
      position: fixed;
   z-index: 10; /* Weiter vorne, überlagert .hintergrund */
-  padding-top: 150px;
+  margin-top: 150px;
 }
 
 .banner-mail {
     font-family: Arial, Helvetica, sans-serif;
     position: fixed; 
     z-index: 10; 
-    padding-top: 185px; 
+     margin-top: 185px;
 }
+
 
 body {
     background-color:rgb(0, 134, 139);
@@ -51,17 +52,6 @@ a {
     /* Optional: Rahmen */
 }
 
-.zeichen-flaeche {
-    position: fixed;
-    top: 23px;
-    left: 399px;
-    width: 1112px; /* Breite der Fläche */
-    height: 680px; /* Höhe der Fläche */
-    background-color: rgb(194, 66, 66); /* Hintergrundfarbe */
-  z-index: 1; /* Weiter hinten */
-    /* Optional: Rahmen */
-}
-
 
 
 .grid-container {
@@ -70,12 +60,12 @@ a {
     gap: 15px; 
     grid-template-columns: 2fr 2fr 2fr 2fr 1fr;  
     grid-template-areas:
-    "banner . . . image-1"
-    "banner . . . image-2"
-    "banner . . . image-3"
-    "banner . . . image-4"
-    "banner . . . image-5"
-    "banner . . . image-6"
+    "banner zoom zoom zoom image-1"
+    "banner zoom zoom zoom image-2"
+    "banner zoom zoom zoom image-3"
+    "banner zoom zoom zoom image-4"
+    "banner zoom zoom zoom image-5"
+    "banner zoom zoom zoom image-6"
     "banner . . . image-7"
     "banner . . . image-8"
     "banner . . . image-9"
@@ -91,13 +81,137 @@ a {
     "banner . . . image-19";
 }
 
+
+
 .banner {
     grid-area: banner;
 }
 
+.zoom-content {
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+.zoom {
+    grid-area: zoom;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    position: sticky;
+    top: 15px; /* Abstand vom oberen Rand */
+    align-self: start;
+}
+
+.zoom-content {
+  display: none;
+}
+
+
 .image-1 {
     grid-area: image-1;
 }
+
+.image-1:hover ~ .zoom,
+.image-2:hover ~ .zoom,
+.image-3:hover ~ .zoom,
+.image-4:hover ~ .zoom,
+.image-5:hover ~ .zoom,
+.image-6:hover ~ .zoom,
+.image-7:hover ~ .zoom,
+.image-8:hover ~ .zoom,
+.image-9:hover ~ .zoom,
+.image-10:hover ~ .zoom,
+.image-11:hover ~ .zoom,
+.image-12:hover ~ .zoom,
+.image-13:hover ~ .zoom,
+.image-14:hover ~ .zoom,
+.image-15:hover ~ .zoom,
+.image-16:hover ~ .zoom,
+.image-17:hover ~ .zoom,
+.image-18:hover ~ .zoom,
+.image-19:hover ~ .zoom  
+ {
+  opacity: 1;
+}
+
+.image-1:hover ~ .zoom .zoom-1 {
+  display: block;
+}
+
+.image-2:hover ~ .zoom .zoom-2 {
+  display: block;
+}
+
+.image-3:hover ~ .zoom .zoom-3 {
+  display: block;
+}
+
+.image-4:hover ~ .zoom .zoom-4 {
+  display: block;
+}
+
+.image-5:hover ~ .zoom .zoom-5 {
+  display: block;
+}
+
+.image-6:hover ~ .zoom .zoom-6 {
+  display: block;
+}
+
+.image-7:hover ~ .zoom .zoom-7 {
+  display: block;
+}
+
+.image-8:hover ~ .zoom .zoom-8 {
+  display: block;
+}
+
+.image-9:hover ~ .zoom .zoom-9 {
+  display: block;
+}
+
+.image-10:hover ~ .zoom .zoom-10 {
+  display: block;
+}
+
+.image-11:hover ~ .zoom .zoom-11 {
+  display: block;
+}
+
+.image-12:hover ~ .zoom .zoom-12 {
+  display: block;
+}
+
+.image-13:hover ~ .zoom .zoom-13 {
+  display: block;
+}
+
+.image-14:hover ~ .zoom .zoom-14 {
+  display: block;
+}
+
+.image-15:hover ~ .zoom .zoom-15 {
+  display: block;
+}
+
+.image-16:hover ~ .zoom .zoom-16 {
+  display: block;
+}
+
+.image-17:hover ~ .zoom .zoom-17 {
+  display: block;
+}
+
+.image-18:hover ~ .zoom .zoom-18 {
+  display: block;
+}
+
+.image-19:hover ~ .zoom .zoom-19 {
+  display: block;
+}
+
+
 
 .image-2 {
     grid-area: image-2;

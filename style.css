@@ -21,15 +21,16 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
      position: fixed;
   z-index: 10; /* Weiter vorne, überlagert .hintergrund */
-  padding-top: 150px;
+  margin-top: 150px;
 }
 
 .banner-mail {
     font-family: Arial, Helvetica, sans-serif;
     position: fixed; 
     z-index: 10; 
-    padding-top: 187px; 
+     margin-top: 185px;
 }
+
 
 body {
     background-color:rgb(0, 134, 139);
@@ -39,25 +40,6 @@ a {
     color: inherit; 
     text-decoration: none;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-
-[id^="projekt"] {
-  scroll-margin-top: 1060px; /* an Bannerhöhe anpassen */
-}
-
-
 
 .banner-flaeche {
     position: fixed;
@@ -69,8 +51,6 @@ html {
   z-index: 1; /* Weiter hinten */
     /* Optional: Rahmen */
 }
-
-
 
 
 
@@ -101,6 +81,19 @@ html {
     "banner . . . image-19";
 }
 
+.banner-projekte {
+    position: fixed; /* oder relative/absolute je nach Layout */
+    top: 250px;      /* Abstand vom oberen Rand */
+    left: 20px;      /* Abstand vom linken Rand */
+    z-index: 10;     /* Sicherstellen, dass es über der Banner-Flaeche liegt */
+    display: flex;
+    flex-direction: column; /* oder row, je nach Wunsch */
+    gap: 10px;       /* Abstand zwischen den Links */
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-margin-top: 15px;
+}
+
+
 .banner {
     grid-area: banner;
 }
@@ -110,6 +103,9 @@ html {
 
 }
 
+html {
+  scroll-padding-top: 15px;
+}
 
 .zoom {
     grid-area: zoom;
@@ -228,6 +224,8 @@ html {
 .image-19:hover ~ .zoom .zoom-19 {
   display: block;
 }
+
+
 
 .image-2 {
     grid-area: image-2;
